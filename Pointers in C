@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+    void update(int *a,int *b)
+ {
+
+     int temp;
+     temp = *a;
+    *a = *a + *b;
+    *b = abs(temp - *b);    //abs(temp-*b);  //-(temp-*b);  abs is a c |mode|function return only positive value.
+    // Complete this function    
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
